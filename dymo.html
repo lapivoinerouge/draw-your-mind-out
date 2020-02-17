@@ -1,0 +1,59 @@
+<html>
+<head>
+    <!--title-->
+    <title>Draw your mind out!</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--js-->
+    <script src="dymo.js"></script>
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Dancing+Script:700" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="dymo.css">
+</head>
+
+<body>
+  <div id="grey-bckgrnd">  
+    <h1 id="main-header">Draw your mind out!</h1>
+  
+    <!---------NEWGRID----------->
+    <div class="popup-top" id="newgrid-popup">
+      <p class="popup-title">Create new grid</p>
+      <img id="cancel-button" src="https://image.ibb.co/b4jFHS/krzyzyk.png" alt="krzyzyk" border="0"></a>
+    
+      <div class="popup-main">
+        <div class="popup-data">
+          <!--height-->
+          Grid Height:
+          <br>
+          <input type="number" id="input_height" class="input-styles" name="height" min="1" value="30" max="30"> 
+          <br>
+          <!--width-->
+          Grid Width:
+          <br>
+          <input type="number" id="input_width" class="input-styles" name="width" min="1" value="30" max="30">
+          <br>
+          Background color:
+          <br>
+          <input type="color" id="grid-color" name="background-color" value="#E9EDF6">
+          <br>
+          <input id= "newgrid-button" class="okay-button" type="submit" onclick="makeGrid(event);" value="NEW GRID">
+        </div>
+      </div>
+    </div>
+  
+ 
+    <div id=rmb class="pen-color" for="rmb-pen-color">Right mouse button:<input type="color" id="rmb-pen-color" class="colorwindow" value="#FFFFFF">
+    </div>
+  
+    <div id="toolbar">
+      <img id="newproject" class ="tool" title="New project" src="https://image.ibb.co/kzcfBn/nowa_kartka_done.png" alt="nowa_kartka_done" border="0">
+      <img id="paint" class="tool" title="Paint bucket" src="https://image.ibb.co/kFivSS/wylej_nowy.png" alt="wylej_nowy" border="0">
+      <img id="pencil" class="tool" title = "Pencil" src="https://preview.ibb.co/dGLg1n/pencil_done.png" alt="pencil_done" border="0">
+      <input type="color" title="Color Picker" id="lmb-pen-color" class="tool colorwindow" value="#DD0581"> 
+    </div>
+  
+    <table id="my-grid" oncontextmenu="return false;"></table>
+  </div>
+</body>
+</html>
